@@ -1,0 +1,86 @@
+---
+title: "Seminar 2"
+format: html
+editor: visual
+author: Matilda Kuusi
+date: today
+echo: false
+bibliography: Human_variation_in_the_shape_of.bib
+---
+
+# Instructions
+
+Find an interesting dataset on DataDryad.org (or another data repository) and download it. Make an RStudio project to reproduce one or more of the figures in the paper associated with the dataset, making your analysis as reproducible as possible by using (at least)
+
+-   git and GitHub
+
+-   renv for package management
+
+-   Best practice for comments and code style
+
+-   here package for helping load data
+
+-   quarto or Rmarkdown for the document (reference the data source and the original paper)
+
+```{r}
+#| label: load-packages
+#| include: false
+
+library(tidyverse) # for ggplot2
+library(here)      # for help finding files
+library(lubridate) # for handling dates & times
+library(gt)        # for tables
+
+```
+
+```{r}
+#| label: load-data
+#| include: false
+
+#reading the csv file
+data1 <- read_csv(here(file = "data/Dataset.csv"))
+```
+
+```{r}
+#| label: model1
+#| include: false
+
+#data for inlet, midplane, outlet
+
+data_fig <- data1|>
+  select(inlet.ML, inlet.AP, midplane.ML, midplane.AP, outlet.ML, outlet.AP, Region)
+```
+
+```{r}
+#| label: calling functions
+
+#run functions for inlet, midplane, outlet
+source("APML_function.R")
+inlet_APML <- APML_div(data_fig, "inlet.AP", "inlet.ML")
+outlet_APML <- APML_div(data_fig, "outlet.AP", "outlet.ML")
+midplane_APML <- APML_div(data_fig,"midplane.AP","midplane.ML")
+```
+
+```{r}
+#| label: dataframe
+#| include: false
+
+#dataframe with AP/ML in each region
+df <- data.frame(inlet_APML, midplane_APML, outlet_APML, data1$Region)
+df
+```
+
+# Figures
+
+Variation in the inlet (a), midplane (b), and outlet (c) indices within the four major geographical regions @Betti2018.
+
+```{r}
+#| label: figures
+
+#boxplots for inlet, outlet and midplane AP/ML
+#in each region
+fig1_a <- boxplot(df$inlet_APML ~ df$data1.Region, main="(a)", xlab = NULL, ylab="inlet AP/ML",  las=2)
+fig1_b <-boxplot(df$midplane_APML ~ df$data1.Region, main="(b)", xlab = NULL, ylab="Midplane AP/ML", las=2)
+fig1_c <- boxplot(df$outlet_APML ~ df$data1.Region, main="(c)",xlab = NULL, ylab="outlet AP/ML", las=2)
+
+```

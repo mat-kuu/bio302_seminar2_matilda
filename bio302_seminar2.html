@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-0.9.492">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Matilda Kuusi">
+<meta name="dcterms.date" content="2022-06-08">
+
+<title>Seminar 2</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+
+<script src="bio302_seminar2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="bio302_seminar2_files/libs/quarto-html/quarto.js"></script>
+<script src="bio302_seminar2_files/libs/quarto-html/popper.min.js"></script>
+<script src="bio302_seminar2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="bio302_seminar2_files/libs/quarto-html/anchor.min.js"></script>
+<link href="bio302_seminar2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="bio302_seminar2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="bio302_seminar2_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="bio302_seminar2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="bio302_seminar2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Seminar 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Matilda Kuusi </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 8, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<p>Find an interesting dataset on DataDryad.org (or another data repository) and download it. Make an RStudio project to reproduce one or more of the figures in the paper associated with the dataset, making your analysis as reproducible as possible by using (at least)</p>
+<ul>
+<li><p>git and GitHub</p></li>
+<li><p>renv for package management</p></li>
+<li><p>Best practice for comments and code style</p></li>
+<li><p>here package for helping load data</p></li>
+<li><p>quarto or Rmarkdown for the document (reference the data source and the original paper)</p></li>
+</ul>
+<div class="cell">
+
+</div>
+</section>
+<section id="figures" class="level1">
+<h1>Figures</h1>
+<p>Variation in the inlet (a), midplane (b), and outlet (c) indices within the four major geographical regions <span class="citation" data-cites="Betti2018">Betti and Manica (<a href="#ref-Betti2018" role="doc-biblioref">2018</a>)</span>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="bio302_seminar2_files/figure-html/figures-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="bio302_seminar2_files/figure-html/figures-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="bio302_seminar2_files/figure-html/figures-3.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Betti2018" class="csl-entry" role="doc-biblioentry">
+Betti, Lia, and Andrea Manica. 2018. <span>“<span class="nocase">Human variation in the shape of the birth canal is significant and geographically structured</span>.”</span> <em>Proceedings of the Royal Society B: Biological Sciences</em> 285 (1889). <a href="https://doi.org/10.1098/rspb.2018.1807">https://doi.org/10.1098/rspb.2018.1807</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
