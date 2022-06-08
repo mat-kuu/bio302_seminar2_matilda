@@ -78,10 +78,21 @@ Variation in the inlet (a), midplane (b), and outlet (c) indices within the four
 ```{r}
 #| label: figures
 
-#boxplots for inlet, outlet and midplane AP/ML
+data_a <- df$inlet_APML
+data_b <- df$midplane_APML
+data_c <- df$outlet_APML
+
+#splitting the group labels to fit the graph
+groups <- gsub(" ", "\n", df$data1.Region)
+
+#boxplots for inlet, midplan, and outlet AP/ML
 #in each region
-fig1_a <- boxplot(df$inlet_APML ~ df$data1.Region, main="(a)", xlab = NULL, ylab="inlet AP/ML",  las=2)
-fig1_b <-boxplot(df$midplane_APML ~ df$data1.Region, main="(b)", xlab = NULL, ylab="Midplane AP/ML", las=2)
-fig1_c <- boxplot(df$outlet_APML ~ df$data1.Region, main="(c)",xlab = NULL, ylab="outlet AP/ML", las=2)
+
+groups <- gsub(" ", "\n", df$data1.Region)
+
+source("box_plot_function.R")
+box_plot(data_a, groups, "(a)", "inlet AP/ML")
+box_plot(data_b,groups, "(b)", "midline AP/ML")
+box_plot(data_c,groups, "(c)", "outlet AP/ML")
 
 ```
