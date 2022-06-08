@@ -30,6 +30,7 @@ library(tidyverse) # for ggplot2
 library(here)      # for help finding files
 library(lubridate) # for handling dates & times
 library(gt)        # for tables
+library(usethis)   # for git
 
 ```
 
